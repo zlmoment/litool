@@ -6,7 +6,8 @@ public class Test {
 			89, 7867, 5, 34, 3, 23, 2, 4, 5, 6, 67 };
 
 	public static void main(String[] args) {
-		MergeSort.mergesort(a);
+		//MergeSort.mergesort(a);
+		QuickSort.quickSort(a, 0, a.length - 1);
 		for (int i : a)
 			System.out.print(i + " ");
 	}
