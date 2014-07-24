@@ -1,12 +1,23 @@
 package litool.sorting;
 
 public class MergeSort {
-
+	
+	/**
+	 * The entrance of MergeSort
+	 * @param array The array to be sorted
+	 */
 	public static void mergesort(int[] array) {
 		int[] helper = new int[array.length];
 		mergesort(array, helper, 0, array.length - 1);
 	}
-
+	
+	/**
+	 * Recursively mergesort
+	 * @param array The array to be sorted
+	 * @param helper The extra memory as a helper
+	 * @param low The beginning index
+	 * @param high The end index
+	 */
 	public static void mergesort(int[] array, int[] helper, int low, int high) {
 		/* the classical recurse divide and conquer */
 		if (low < high) {
@@ -16,7 +27,15 @@ public class MergeSort {
 			merge(array, helper, low, middle, high);
 		}
 	}
-
+	
+	/**
+	 * Merge two parts of the array
+	 * @param array The array to be sorted
+	 * @param helper The extra memory
+	 * @param low The beginning index
+	 * @param middle The middle index
+	 * @param high The last index
+	 */
 	public static void merge(int[] array, int[] helper, int low, int middle, int high) {
 		/* copy both halves into a helper array */
 		for (int i = low; i <= high; i++) {
